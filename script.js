@@ -1,21 +1,14 @@
-// global.document = new JSDOM(html).window.document;
-     
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classListadd('show');
+        }
+        else{
+            entry.target.classList.remove('show')
+        }
+    });
+});
 
-// var body = document.querySelector("div");
-//     document.querySelector("#red").addEventListener('click', function(){
-//         body.style.backgroundColor = 'red';
-//     });
-//     document.querySelector("#green").addEventListener('click', function(){
-//         body.style.backgroundColor = 'green';
-//     });
-//     document.querySelector("#blue").addEventListener('click', function(){
-//         body.style.backgroundColor = 'blue';
-//     });
-//     document.querySelector("#black").addEventListener('click', function(){
-//         body.style.backgroundColor = 'black';
-//     });
-  
-
-// function myFunction() {
-//     document.getElementById("demo").innerHTML = "Paragraph changed.";
-//   }
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

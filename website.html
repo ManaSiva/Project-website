@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <button id="red">Red</button>
-    <button id="blue">blue</button>
-    <button id="green">white</button>
-    <button id="black">black</button>
 
-    
-     <script> 
-     
-     let body = document.querySelector('body');
-        document.querySelector("#red").addEventListener('click', function(){
-            body.style.backgroundColor = 'red';
-        });
-        document.querySelector("#green").addEventListener('click', function(){
-            body.style.backgroundColor = 'white';
-        });
-        document.querySelector("#blue").addEventListener('click', function(){
-            body.style.backgroundColor = 'blue';
-        });
-        document.querySelector("#black").addEventListener('click', function(){
-            body.style.backgroundColor = 'black';
-        });
-     </script>
-</body> 
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explained</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+
+    <div class="box">
+    <button class="mbl" >mobile</button>
+    <button class="lpt" >laptop</button>
+    <button class="eph" >earphones</button>
+    <button class="chg" >chargers</button>
+    </div>
+
+    <p>Hello there</p>
+
+    <div>
+        <img src="spidy_fallin.png" alt="" width="60%">
+
+    </div>
+</body>
 </html>
